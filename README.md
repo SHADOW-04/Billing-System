@@ -135,7 +135,7 @@ Bill saved to bill.txt
 
 ## 👤 Author
 
-Alpha
+**ALPHA**
 
 ---
 

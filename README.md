@@ -139,7 +139,7 @@ Bill saved to bill.txt
 
 ---
 
-## License
+## 📄 License
 ```yaml
 This project is licensed under the MIT License - see the LICENSE file for details.
 ```

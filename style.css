@@ -1,0 +1,124 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff512f, #dd2476, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #ff2e63, #21d4fd, #b721ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: shimmer 3s linear infinite;
+  background-size: 200% auto;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Sections */
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.menu, .cart {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 320px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu:hover, .cart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255,255,255,0.4);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #ff2e63, #ff8a00, #ff2e63);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-size: 200% auto;
+  animation: buttonGradient 5s linear infinite;
+}
+
+@keyframes buttonGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 138, 0, 0.8);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Checkout Popup */
+#receipt {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: left;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: top 0.6s ease, opacity 0.6s ease;
+  z-index: 999;
+}
+#receipt.show {
+  top: 50px;
+  opacity: 1;
+}

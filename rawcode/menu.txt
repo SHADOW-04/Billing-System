@@ -1,0 +1,4 @@
+Food Pizza 250
+Food Burger 120
+Beverage Coke 50
+Beverage Coffee 80

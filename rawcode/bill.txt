@@ -1,0 +1,4 @@
+----- BILL -----
+Pizza x2 = Rs500
+Coke x2 = Rs100
+TOTAL = Rs600
